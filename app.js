@@ -1,5 +1,6 @@
 //Usanndo objeto express
 const express = require('express');
+const { param } = require('express/lib/request');
 
 //App de express
 const app = express();
@@ -21,7 +22,7 @@ app.get('/explorersInNode', (req, res)=>{
     res.send(explorer);
 });
 
-app.get('/explorer/:explorerName', (req, res)=>{
+app.get('/explorer/:explorerName/:explorerAge', (req, res)=>{
     res.send(req.params);
 });
 
