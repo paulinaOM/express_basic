@@ -1,0 +1,15 @@
+{
+  "name": "express_basic",
+  "version": "1.0.0",
+  "description": "My first server with express",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "node app.js"
+  },
+  "author": "paulinaom",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
