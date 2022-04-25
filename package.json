@@ -4,12 +4,14 @@
   "description": "My first server with express",
   "main": "index.js",
   "scripts": {
-    "test": "npm start",
-    "start": "node app.js"
+    "test": "node ./node_modules/jest/bin/jest",
+    "start": "node index.js"
   },
   "author": "paulinaom",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
   }
 }
