@@ -30,4 +30,21 @@ describe("Unit test for Express", () => {
         })
     });
     
+    test("Route GET /explorersInNode: replying with object", (done) => {
+        request(app)
+            .get("/explorersInNode")
+            .expect(200)
+            .expect((res) => {
+                const explorer = JSON.parse(res.text);
+                
+                console.log(explorer);
+
+                expect(explorer.name).toBe('Explorer')
+                expect(explorer.msg).toBe('Hello')
+            })
+        .end((err, res) => {
+            if (err) return done(err);
+            return done();
+        })
+    })
 })
