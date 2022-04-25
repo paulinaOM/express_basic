@@ -47,4 +47,22 @@ describe("Unit test for Express", () => {
             return done();
         })
     })
+
+    test("Route GET /explorer/:explorerName: query params", (done) => {
+        request(app)
+            .get("/explorer/paulinaom/23")
+            .expect(200)
+            .expect((res) => {
+                const params = JSON.parse(res.text);
+                
+                console.log(params);
+
+                expect(params.explorerName).toBe('paulinaom')
+                expect(params.explorerAge).toBe("23")
+            })
+        .end((err, res) => {
+            if (err) return done(err);
+            return done();
+        })
+    })
 })
